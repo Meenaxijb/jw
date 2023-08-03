@@ -206,7 +206,28 @@ button.accordion-button:after {
  left: 10px;
 
 } */
+.h-100px
+{
+  height: 100px;
+}
+.accordion-body{
+  line-height: 27px;
+}
+.fs-15{
+  font-size: 15px;
+  line-height: 24px;
 
+  font-weight: 300;
+}
+.why  li {
+  padding: 5px 0;
+}
+.why ul li{
+  font-weight: 300;
+}
+.why> li{
+  padding: 10px;
+}
 .scrolling-area::-webkit-scrollbar-thumb {
   background: hsl(0deg 0% 57.25%);
   border-radius: 10px;
