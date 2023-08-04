@@ -139,7 +139,7 @@ h1 {
 }
 
 .card {
-  height: 435px;
+  height: 470px;
 }
 
 .card-body {
@@ -149,8 +149,6 @@ h1 {
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
   isolation: isolate;
-
-
 }
 
 .accordion button.accordion-button {
@@ -159,6 +157,7 @@ h1 {
   font-size: 17px;
   padding: 26px 0;
   background: transparent;
+  font-weight: 600;
 }
 
 button.accordion-button.collapsed:after {
