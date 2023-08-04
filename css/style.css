@@ -23,7 +23,9 @@
   --bs-blue: #0d6efd;
   --ylw: #fdd947;
 }
-
+.text-ylw{
+  color:var(--ylw);
+}
 @media (min-width: 1400px) {
 
   .main-width {
@@ -120,7 +122,7 @@ h2 {
 .help-p {
   font-size: 14px;
   line-height: 20px;
-
+text-transform: capitalize;
 }
 
 .border-bottom {
@@ -272,8 +274,31 @@ p {
 .bg-gray {
   background-color: #f2f2f2;
 }
-
+.start-cr {
+  left: 52px;
+  top: -24px;
+ 
+}
 .content-flavour {
   margin: 0 auto;
   width: 90%;
+}
+
+.bg-footer {
+background-image: url('../images/bottom-strip.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  border: none;
+  border-bottom: 2px solid rgb(128, 126, 126);
+  background: transparent;
+  outline: none;
+  width: 100%;
+  text-transform: capitalize;
+  padding: 1rem 0.4rem;
 }
