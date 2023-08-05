@@ -1,5 +1,5 @@
 <?
-header("Access-Control-Allow-Origin: *");
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the JSON data sent from the JavaScript
