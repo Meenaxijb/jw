@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $smtpPort = 587;
 
     // Compose the email
-    $to = "recipient@example.com"; // Replace with the email address you want to send the message to
+    $to = "meenaxibadola18@gmail.com"; // Replace with the email address you want to send the message to
     $subject = "New Contact Form Submission";
     $headers = "From: $name <$email>";
 
