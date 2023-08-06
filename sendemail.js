@@ -3,15 +3,16 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 
     const formData = new FormData(event.target);
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "sendEmail.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            alert(response.message);
-            document.getElementById("contactForm").reset();
-        }
-    };
-    xhr.send(new URLSearchParams(formData));
+    fetch("sendEmail.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
 });

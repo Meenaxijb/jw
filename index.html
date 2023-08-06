@@ -1208,20 +1208,17 @@
         
         <h1>Contact Form</h1>
       
-        <form id="player" method="post" action="mailto:meenaxibadola1@gmail.com">
-
-            <label for="name">Your Name</label>
-            <input type="text" name="name" title="Enter your name" class="required">
-        
-            <label for="phone">Daytime Phone</label>
-            <input type="tel" name="phone" class="required">
-        
-            <label for="email">Email</label>
-            <input type="email" name="email" title="Enter your e-mail address" class="required email">
-        
-        
-            <input type="submit" name="submit" class="button" id="submit" value="I'd like to join Now" />
-        
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    
+            <input type="submit" value="Submit">
         </form>
         
         
@@ -1439,7 +1436,7 @@
 
 
     </div>
-
+    <script src="sendEmail.js"></script>
     <!-- footer -->
 
 </body>
