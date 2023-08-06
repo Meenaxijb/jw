@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="contact.js"></script>
+
 </head>
 
 <body>
@@ -1206,7 +1206,7 @@
         </section>
         
         <h1>Contact Form</h1>
-        <form id="contactForm" method="post">
+        <form  onsubmit="sendEmail(); reset(); return false;" id="contactForm" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
             <label for="email">Email:</label>
@@ -1430,8 +1430,23 @@
     </div>
 
     <!-- footer -->
-
-
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function sendEmail(){
+			Email.send({
+			Host: "smtp.gmail.com",
+			Username: "meenaxibadola18@gmail.com",
+			Password: "Meenaxi05@",
+			To: 'meenaxibadola18@gmail.com',
+			From: document.getElementById("email").value,
+			Subject: "This is the subject",
+			Body: "And this is the body"
+		}).then(
+			message => alert(message)
+		);
+		}
+	
+	</script>
 </body>
 
 </html>
