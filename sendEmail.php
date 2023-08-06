@@ -5,13 +5,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = $_POST["message"];
 
     // Replace these values with your SMTP server details
-    $smtpServer = "your-smtp-server.com";
-    $smtpUsername = "your-smtp-username";
-    $smtpPassword = "your-smtp-password";
+    $smtpServer = "smtp.gmail.com";
+    $smtpUsername = "meenaxibadola18@gmail.com";
+    $smtpPassword = "Meenaxi05@";
     $smtpPort = 587;
 
     // Compose the email
-    $to = "meenaxibadola18@gmail.com"; // Replace with the email address you want to send the message to
+    $to = "meenaxibadola1@gmail.com"; // Replace with the email address you want to send the message to
     $subject = "New Contact Form Submission";
     $headers = "From: $name <$email>";
 
