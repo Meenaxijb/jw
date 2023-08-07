@@ -1,31 +1,44 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // Simple form validation
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "All fields are required.";
-        exit;
-    }
+    // Replace these values with your SMTP server details
+    $smtpServer = "smtp.gmail.com";
+    $smtpUsername = "meenaxibadola18@gmail.com";
+    $smtpPassword = "Meenaxi05@";
+    $smtpPort = 587;
 
-    // Validate email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.";
-        exit;
-    }
+    // Compose the email
+    $to = "meenaxibadola1@gmail.com"; // Replace with the email address you want to send the message to
+    $subject = "New Contact Form Submission";
+    $headers = "From: $name <$email>";
 
-    // Set up email information
-    $to = "meenaxibadola18@gmai.com"; // Replace with your email address
-    $subject = "Contact Form Submission";
-    $headers = "From: $email";
+    // Send the email using PHPMailer (requires PHPMailer library)
+    require 'PHPMailer/PHPMailer.php';
+    require 'PHPMailer/SMTP.php';
 
-    // Send the email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Thank you for your message. We will get back to you soon!";
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->isSMTP();
+    $mail->Host       = $smtpServer;
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $smtpUsername;
+    $mail->Password   = $smtpPassword;
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = $smtpPort;
+
+    $mail->setFrom($email, $name);
+    $mail->addAddress($to);
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+
+    if ($mail->send()) {
+        $response = array("status" => "success", "message" => "Message sent successfully!");
     } else {
-        echo "Something went wrong. Please try again later.";
+        $response = array("status" => "error", "message" => "Failed to send message.");
     }
+
+    echo json_encode($response);
 }
 ?>
