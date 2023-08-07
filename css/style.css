@@ -41,12 +41,24 @@
 .w-115 {
   width: 115px;
 }
-
+.carousel-indicators {
+  bottom: -53px  !important;
+}
 .border-top {
   border-top: 1px solid white;
   border-radius: 0 !important;
 }
-
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%!important;
+  width: 14px!important;
+  height: 13px;
+  background-color: #000;
+ 
+}
+a {
+  color: #000;
+text-decoration: none;
+}
 .nav-link {
   margin: 6px 0;
   width: 100%;
@@ -141,7 +153,7 @@ h1 {
 }
 
 .card {
-  height: 470px;
+  height: 490px;
 }
 
 .card-body {
@@ -161,7 +173,13 @@ h1 {
   background: transparent;
   font-weight: 600;
 }
+.h-190{
+  height: 220px;
+}
+.accordion-button:not(.collapsed) {
 
+  box-shadow: 0 0 0 0 !important;
+}
 button.accordion-button.collapsed:after {
   content: "\f067";
   font-family: 'FontAwesome';
