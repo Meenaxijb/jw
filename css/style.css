@@ -173,6 +173,11 @@ h1 {
   background: transparent;
   font-weight: 600;
 }
+.design-try{
+  background: #f1f1f138;
+  height: 422px;
+  /* padding-left: 49px; */
+}
 .h-190{
   height: 220px;
 }
