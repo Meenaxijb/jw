@@ -4,6 +4,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
+    // Simple form validation
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "All fields are required.";
+        exit;
+    }
+
     // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email format.";
@@ -11,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Set up email information
-    $to = "menaxibadola1@gmail.com"; // Replace with your email address
+    $to = "meenaxibadola18@gmai.com"; // Replace with your email address
     $subject = "Contact Form Submission";
     $headers = "From: $email";
 
