@@ -210,7 +210,13 @@ button.accordion-button:after {
   padding: 1rem;
   direction: rtl;
 }
+.option-container {
+  display: none;
+}
 
+.option-container.active {
+  display: block;
+}
 .scrolling-element-inside {
   direction: ltr;
 }
@@ -220,7 +226,7 @@ button.accordion-button:after {
 }
 
 .scrolling-area::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px hsl(0deg 0% 35.69%);
+  box-shadow: inset 0 0 5px hsl(0deg 0% 57.25%);
   border-radius: 10px;
   height: 10px;
 }
@@ -265,8 +271,8 @@ button.accordion-button:after {
   height: 5px;
 }
 
-.scrolling-area::-webkit-scrollbar-thumb:hover {
-  background: hsl(0deg 0% 57.25%);
+.scrolling-area::-webkit-scrollbar-thumb{
+  background: var(--ylw)
 }
 
 .nav-tabs .nav-item.show .nav-link,
@@ -354,6 +360,12 @@ textarea {
     padding: 11px 10px!important;
     border: 1px solid black!important;
 
+}
+ .nav-link.active {
+  color: #fff !important;
+  color: var(--bs-nav-tabs-link-active-color);
+  background-color: var(--bs-nav-tabs-link-active-bg);
+  border-color: var(--bs-nav-tabs-link-active-border-color);
 }
 .form-heading{
 
