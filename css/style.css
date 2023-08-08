@@ -167,7 +167,7 @@ h1 {
 
 .accordion button.accordion-button {
   border-top: 1px solid #bbb;
-  border-radius: 0 !important;
+
   font-size: 17px;
   padding: 26px 0;
   background: transparent;
@@ -305,6 +305,18 @@ p {
   background: #fdd947;
   width: 86px;
 }
+.form-box {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #1D1D1D;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 3px 3px 15px 3px #8C8C8C;
+}
 .cr-img{
     width: 56px;
     position: absolute;
@@ -328,11 +340,30 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  border: none;
-  border-bottom: 2px solid rgb(128, 126, 126);
+  /* border: none; */
+  /* border-bottom: 2px solid rgb(128, 126, 126); */
   background: transparent;
   outline: none;
   width: 100%;
   text-transform: capitalize;
   padding: 1rem 0.4rem;
+}
+.form-slect-btn{
+
+    border-radius: 40px !important;
+    padding: 11px 10px!important;
+    border: 1px solid black!important;
+
+}
+.form-heading{
+
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 0;
+}
+.accordion-button {
+
+  font-weight: 300;
 }
