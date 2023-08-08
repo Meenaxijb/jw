@@ -205,10 +205,12 @@ button.accordion-button:after {
   font-weight: 700;
 }
 .scrolling-area {
-  max-height: 280px;
+  max-height: 350px;
   overflow: auto;
   padding: 1rem;
   direction: rtl;
+  background-color: var(--ylw);
+  border-radius: 10px;
 }
 .option-container {
   display: none;
@@ -272,7 +274,7 @@ button.accordion-button:after {
 }
 
 .scrolling-area::-webkit-scrollbar-thumb{
-  background: var(--ylw)
+  background: black;
 }
 
 .nav-tabs .nav-item.show .nav-link,
